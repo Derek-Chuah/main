@@ -20,7 +20,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
 
   private MecanumDrive m_drive = new MecanumDrive(frontLeft, rearLeft, frontRight, rearRight);
 
-  public DrivetrainSubsystem() {}
+  public DrivetrainSubsystem() {
+    rearLeft.setInverted(true);
+    frontLeft.setInverted(true);
+  }
 
 
   @Override
